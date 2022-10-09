@@ -13,8 +13,13 @@ class ProductPageLocators():
     BASKET_BUTTON = (By.CSS_SELECTOR, "[class*='btn-add-to-basket']")
     PRODUCT_NAME = (By.TAG_NAME, "h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR,".col-sm-6.product_main p")
+    PRODUCT_ADDED_SUCCESS_MESSAGE = (By.CSS_SELECTOR,".alert.success:nth-child(1) div")
+    SHIPPING_SUCCESS_MESSAGE = (By.CSS_SELECTOR,".alert.success:nth-child(2) div")
+    PRODUCT_NAME_SUCCESS_MESSAGE = (By.CSS_SELECTOR,".alert.success:nth-child(1) div")
+    PRODUCT_NAME_IN_SUCCESS_MESSAGE = (By.CSS_SELECTOR,"div.alertinner strong")
 
-class BasketPageLocators():
+
+class BasketPageLocators():  
     BASKET_URL = (By.CSS_SELECTOR, "[href*='/ru/basket/']")
     ADDED_PRODUCT_NAME = (By.TAG_NAME, "h3")
     ADDED_PRODUCT_PRICE = (By.CSS_SELECTOR,".col-sm-1:nth-child(4) p")

@@ -1,7 +1,11 @@
 from selenium.webdriver.common.by import By
 
 class MainPageLocators():
+    BASKET_URL = (By.CSS_SELECTOR, "[href*='/ru/basket/']")
+
+class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
 
 class LoginPageLocators():
     LOGIN_FORM = (By.ID, "login_form")
@@ -17,7 +21,7 @@ class ProductPageLocators():
     SHIPPING_SUCCESS_MESSAGE = (By.CSS_SELECTOR,".alert.success:nth-child(2) div")
     PRODUCT_NAME_SUCCESS_MESSAGE = (By.CSS_SELECTOR,".alert.success:nth-child(1) div")
     PRODUCT_NAME_IN_SUCCESS_MESSAGE = (By.CSS_SELECTOR,"div.alertinner strong")
-
+    LOGIN_URL = (By.CSS_SELECTOR, "[href*='/en-gb/accounts/login/']")
 
 class BasketPageLocators():  
     BASKET_URL = (By.CSS_SELECTOR, "[href*='/ru/basket/']")

@@ -47,6 +47,12 @@ class ProductPage(BasePage):
     def get_product_name_from_the_meesage(self):
         assert self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_IN_SUCCESS_MESSAGE)
 
+    def get_login_link(self):
+        login_link = self.browser.find_element(*ProductPageLocators.LOGIN_URL)
+        login_link.click()
+
+        
+
 
 
 

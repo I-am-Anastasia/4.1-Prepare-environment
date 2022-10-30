@@ -4,6 +4,7 @@ import math
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from .locators import BasePageLocators
 
 class BasePage():
     def __init__(self, browser, url, timeout=10): 
@@ -51,4 +52,10 @@ class BasePage():
         except NoAlertPresentException:
             print("No second alert presented") 
 
-  
+    def go_basket_link(self):
+        basket_link = self.browser.find_element(*BasePageLocators.BASKET_URL)
+        basket_link.click()
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                 " probably unauthorised user"
